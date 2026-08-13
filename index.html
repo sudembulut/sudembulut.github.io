@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudem Bulut</title>
+<meta name="description" content="Sudem Bulut — Mathematical Engineering at Istanbul Technical University, researching low-cost sensing for outdoor crowd density.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 22C8 22 10 10 16 10S24 20 30 18' fill='none' stroke='%230a47f0' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Sudem Bulut</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="hero">
+      <p class="eyebrow">Mathematical Engineering · İstanbul</p>
+      <h1>Sudem Bulut</h1>
+      <p class="lead">I'm a Mathematical Engineering student at Istanbul Technical University. My work is mostly about pulling usable signal out of noisy measurements — right now, estimating how crowded an outdoor space is using cheap radios instead of cameras.</p>
+
+      <figure class="signal">
+        <svg viewBox="0 42 800 122" role="img" aria-labelledby="signal-title">
+          <title id="signal-title">A noisy sensor trace with a smoothed estimate drawn through it</title>
+          <polyline class="trace-noise" points="0,149 16,125 32,142 48,153 64,126 80,129 96,142 112,112 128,131 144,124 160,107 176,131 192,108 208,119 224,97 240,111 256,115 272,95 288,113 304,92 320,83 336,93 352,94 368,63 384,81 400,68 416,81 432,55 448,65 464,79 480,56 496,71 512,51 528,69 544,76 560,56 576,74 592,86 608,74 624,71 640,95 656,76 672,88 688,94 704,74 720,86 736,70 752,91 768,94 784,80 800,89"></polyline>
+          <path class="trace-signal" d="M0,140 C120,140 160,105 240,108 S380,70 470,62 S620,88 800,84"></path>
+        </svg>
+        <figcaption>
+          <span class="key key-noise">raw observations</span>
+          <span class="key key-signal">filtered estimate</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <h2 class="section-head">Currently</h2>
+      <p>I'm finishing my degree and running a TÜBİTAK-funded research project on reading crowd density from Wi-Fi signal patterns — low-cost sensors, noisy data, and an estimate that stays anonymous by design.</p>
+      <p>Most recently I spent a year as a business intelligence engineering intern at Amazon, on the TR Retail Tech team, and before that a year on customer experience analytics at Getir. Running alongside all of it: several years mentoring robotics students and building student communities, which is still the part of the work I'd defend hardest.</p>
+
+      <ul class="links">
+        <li><a href="mailto:sudembulut@hotmail.com">sudembulut@hotmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/sudembulut/">LinkedIn</a></li>
+        <li><a href="https://github.com/sudembulut">GitHub</a></li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Sudem Bulut · İstanbul</span>
+    <span><a href="mailto:sudembulut@hotmail.com">sudembulut@hotmail.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
