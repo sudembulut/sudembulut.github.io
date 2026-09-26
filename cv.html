@@ -18,12 +18,17 @@
   <div class="wrap">
     <a class="brand" href="index.html">Sudem Bulut</a>
     <nav class="nav" aria-label="Main">
-      <a href="index.html#about">About</a>
-      <a href="index.html#experience">Experience</a>
-      <a href="index.html#community">Community</a>
-      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="index.html#experience" data-i18n="nav.experience">Experience</a>
+      <a href="index.html#community" data-i18n="nav.community">Community</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="index.html#meet" data-i18n="nav.meet">Meet</a>
       <a href="cv.html" aria-current="page">CV</a>
     </nav>
+    <div class="lang-toggle" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+    </div>
   </div>
 </header>
 
@@ -31,41 +36,41 @@
   <div class="wrap">
 
     <section class="hero">
-      <p class="eyebrow">Curriculum vitae</p>
+      <p class="eyebrow" data-i18n="cv.eyebrow">Curriculum vitae</p>
       <h1>Sudem Bulut</h1>
-      <p class="lead">İstanbul, Türkiye · <a href="mailto:sudembulut@hotmail.com">sudembulut@hotmail.com</a> · <a href="https://www.linkedin.com/in/sudembulut/">LinkedIn</a> · <a href="https://github.com/sudembulut">GitHub</a></p>
+      <p class="lead"><span data-i18n="cv.location">İstanbul, Türkiye</span> · <a href="mailto:sudembulut@hotmail.com">sudembulut@hotmail.com</a> · <a href="https://www.linkedin.com/in/sudembulut/">LinkedIn</a> · <a href="https://github.com/sudembulut">GitHub</a></p>
     </section>
 
     <section class="section">
-      <h2 class="section-head">Education</h2>
+      <h2 class="section-head" data-i18n="cv.education">Education</h2>
 
       <div class="entry">
-        <p class="entry-when">Sep 2022 — Jun 2027</p>
+        <p class="entry-when" data-i18n="cv.itu.when">Sep 2022 — Jun 2027</p>
         <div>
-          <h3>BSc, Mathematical Engineering</h3>
-          <p class="entry-org">Istanbul Technical University</p>
+          <h3 data-i18n="cv.itu.degree">BSc, Mathematical Engineering</h3>
+          <p class="entry-org" data-i18n="cv.itu.org">Istanbul Technical University</p>
         </div>
       </div>
 
       <div class="entry">
         <p class="entry-when">2018 — 2022</p>
         <div>
-          <h3>High school, science track</h3>
+          <h3 data-i18n="cv.hs.degree">High school, science track</h3>
           <p class="entry-org">Beşiktaş Anadolu Lisesi</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-head">Experience</h2>
+      <h2 class="section-head" data-i18n="cv.experience">Experience</h2>
 
       <div class="entry">
-        <p class="entry-when">Jul 2025 — Jul 2026</p>
+        <p class="entry-when" data-i18n="exp.amazon.when">Jul 2025 — Jul 2026</p>
         <div>
-          <h3>Business Intelligence Engineer Intern, Data/AI</h3>
+          <h3 data-i18n="exp.amazon.role">Business Intelligence Engineer Intern, Data/AI</h3>
           <p class="entry-org">Amazon</p>
-          <p>TR Retail Tech team, focused on AI data engineering — efficiency, automation and applied AI.</p>
-          <ul>
+          <p data-i18n="exp.amazon.intro">TR Retail Tech team, focused on AI data engineering — efficiency, automation and applied AI.</p>
+          <ul data-i18n="exp.amazon.list">
             <li>Ran price and performance analysis over a catalogue of roughly 35,000 products with a machine learning model, and turned it into a pricing system that produces a price the team can trust.</li>
             <li>Replaced the manual data flows behind that pricing work with automated ones, cutting eight hours of hand-run work a week.</li>
             <li>Built click and event analytics in the spirit of Mixpanel to reconstruct the customer funnel end to end, exposing where shoppers drop off and which steps were worth fixing first.</li>
@@ -75,11 +80,11 @@
       </div>
 
       <div class="entry">
-        <p class="entry-when">Jul 2023 — Jun 2026</p>
+        <p class="entry-when" data-i18n="com.teamnf.when">Jul 2023 — Jun 2026</p>
         <div>
-          <h3>Robotics Team Mentor</h3>
+          <h3 data-i18n="com.teamnf.role">Robotics Team Mentor</h3>
           <p class="entry-org">Team NF</p>
-          <ul>
+          <ul data-i18n="com.teamnf.list">
             <li>Mentored students across STEAM fields through hands-on learning and team collaboration.</li>
             <li>Helped shape the team's vision and structure, led training sessions and organised internal workflows.</li>
             <li>Led sponsorship efforts and coordinated cross-functional projects for long-term sustainability.</li>
@@ -90,11 +95,11 @@
       </div>
 
       <div class="entry">
-        <p class="entry-when">Feb 2024 — Jan 2025</p>
+        <p class="entry-when" data-i18n="exp.getir.when">Feb 2024 — Jan 2025</p>
         <div>
-          <h3>Customer Experience Analytics Intern</h3>
+          <h3 data-i18n="exp.getir.role">Customer Experience Analytics Intern</h3>
           <p class="entry-org">Getir</p>
-          <ul>
+          <ul data-i18n="exp.getir.list">
             <li>Led reporting of customer experience metrics to C-level executives, delivering insights behind strategic decisions.</li>
             <li>Built and maintained dashboards tracking KPIs and customer feedback across channels.</li>
             <li>Worked with cross-functional teams on data-driven improvements to the customer journey.</li>
@@ -103,11 +108,11 @@
       </div>
 
       <div class="entry">
-        <p class="entry-when">Dec 2022 — Aug 2024</p>
+        <p class="entry-when" data-i18n="com.tog.when">Dec 2022 — Aug 2024</p>
         <div>
-          <h3>Community Coordinator, ITU chapter</h3>
+          <h3 data-i18n="com.tog.role">Community Coordinator, ITU chapter</h3>
           <p class="entry-org">Toplum Gönüllüleri Vakfı (TOG)</p>
-          <ul>
+          <ul data-i18n="com.tog.list">
             <li>Rebuilt and led the ITU TOG community after a five-year break, forming an active volunteer network of over 100 members.</li>
             <li>Planned and coordinated events to drive student engagement and social responsibility.</li>
             <li>Managed a team of volunteers.</li>
@@ -116,11 +121,11 @@
       </div>
 
       <div class="entry">
-        <p class="entry-when">Sep 2023 — Feb 2024</p>
+        <p class="entry-when" data-i18n="exp.startgate.when">Sep 2023 — Feb 2024</p>
         <div>
-          <h3>Business Development Intern</h3>
+          <h3 data-i18n="exp.startgate.role">Business Development Intern</h3>
           <p class="entry-org">StartGate</p>
-          <ul>
+          <ul data-i18n="exp.startgate.list">
             <li>Worked at a digital game entrepreneurship centre serving the EU and MENAT region as both accelerator and incubator.</li>
             <li>Conducted market research and analysis, delivering findings as clear, data-driven reports.</li>
           </ul>
@@ -128,20 +133,20 @@
       </div>
 
       <div class="entry">
-        <p class="entry-when">May 2023 — Oct 2023</p>
+        <p class="entry-when" data-i18n="com.mekupte.when">May 2023 — Oct 2023</p>
         <div>
-          <h3>Organization Scrum Team Developer</h3>
-          <p class="entry-org">MEKÜPTE — Mathematics and Mathematics Engineering Society</p>
-          <p>Ran research, content and community events promoting mathematics, science and technology, working within Scrum practice.</p>
+          <h3 data-i18n="com.mekupte.role">Organization Scrum Team Developer</h3>
+          <p class="entry-org" data-i18n="cv.mekupte.org">MEKÜPTE — Mathematics and Mathematics Engineering Society</p>
+          <p data-i18n="cv.mekupte.text">Ran research, content and community events promoting mathematics, science and technology, working within Scrum practice.</p>
         </div>
       </div>
 
       <div class="entry">
-        <p class="entry-when">Nov 2020 — Sep 2021</p>
+        <p class="entry-when" data-i18n="com.kodluyoruz.when">Nov 2020 — Sep 2021</p>
         <div>
           <h3>CS50x Fellow</h3>
           <p class="entry-org">Kodluyoruz</p>
-          <ul>
+          <ul data-i18n="com.kodluyoruz.list">
             <li>Guided 26 high-school students from cities across Anatolia through Harvard's CS50x computer science course.</li>
             <li>Wrote weekly games, quizzes and presentations, sustaining an interactive online classroom through the pandemic.</li>
           </ul>
@@ -149,36 +154,36 @@
       </div>
 
       <div class="entry">
-        <p class="entry-when">Jun 2019 — Nov 2020</p>
+        <p class="entry-when" data-i18n="cv.first.when">Jun 2019 — Nov 2020</p>
         <div>
-          <h3>Team Member, Bosphorus Robotics #8158</h3>
+          <h3 data-i18n="cv.first.role">Team Member, Bosphorus Robotics #8158</h3>
           <p class="entry-org">FIRST</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-head">Skills</h2>
+      <h2 class="section-head" data-i18n="cv.skills">Skills</h2>
       <ul class="plain">
-        <li>LangGraph <span class="when">— agent and workflow orchestration</span></li>
-        <li>Generative AI</li>
+        <li data-i18n="cv.skill.langgraph">LangGraph <span class="when">— agent and workflow orchestration</span></li>
+        <li data-i18n="cv.skill.genai">Generative AI</li>
         <li>Retrieval-Augmented Generation (RAG)</li>
-        <li>Machine learning <span class="when">— pricing and performance models</span></li>
-        <li>Product analytics <span class="when">— clickstream, funnel and drop-off analysis</span></li>
-        <li>Cloud applications</li>
+        <li data-i18n="cv.skill.ml">Machine learning <span class="when">— pricing and performance models</span></li>
+        <li data-i18n="cv.skill.analytics">Product analytics <span class="when">— clickstream, funnel and drop-off analysis</span></li>
+        <li data-i18n="cv.skill.cloud">Cloud applications</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2 class="section-head">Languages</h2>
+      <h2 class="section-head" data-i18n="cv.languages">Languages</h2>
       <ul class="plain">
-        <li>English <span class="when">— professional working</span></li>
-        <li>Spanish <span class="when">— elementary</span></li>
+        <li data-i18n="cv.lang.en">English <span class="when">— professional working</span></li>
+        <li data-i18n="cv.lang.es">Spanish <span class="when">— elementary</span></li>
       </ul>
     </section>
 
     <section class="section">
-      <h2 class="section-head">Certifications</h2>
+      <h2 class="section-head" data-i18n="cv.certifications">Certifications</h2>
       <ul class="plain">
         <li>AWS Certified AI Practitioner</li>
         <li>Programming for Everybody: Getting Started with Python</li>
@@ -199,5 +204,7 @@
   </div>
 </footer>
 
+<script src="js/lang-tr.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

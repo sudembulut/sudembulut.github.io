@@ -17,13 +17,18 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="#intro">Sudem Bulut</a>
-    <nav class="nav" aria-label="Main">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#community">Community</a>
-      <a href="#projects">Projects</a>
-      <a href="cv.html">CV</a>
+    <nav class="nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#community" data-i18n="nav.community">Community</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#meet" data-i18n="nav.meet">Meet</a>
+      <a href="cv.html" data-i18n="nav.cv">CV</a>
     </nav>
+    <div class="lang-toggle" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+    </div>
   </div>
 </header>
 
@@ -32,46 +37,47 @@
 
     <section class="intro" id="intro">
       <div class="intro-text">
-        <p class="eyebrow">Mathematical Engineering · İstanbul</p>
+        <p class="eyebrow" data-i18n="intro.eyebrow">Mathematical Engineering · İstanbul</p>
         <h1>Sudem Bulut</h1>
-        <p class="lead">I'm a Mathematical Engineering student at Istanbul Technical University. My work is mostly about pulling usable signal out of noisy measurements — right now, estimating how crowded an outdoor space is using cheap radios instead of cameras.</p>
+        <p class="lead" data-i18n="intro.lead">I'm a Mathematical Engineering student at Istanbul Technical University. My work is mostly about pulling usable signal out of noisy measurements — right now, estimating how crowded an outdoor space is using cheap radios instead of cameras.</p>
         <ul class="links">
-          <li><a href="mailto:sudembulut@hotmail.com">Email</a></li>
+          <li><a href="mailto:sudembulut@hotmail.com" data-i18n="intro.email">Email</a></li>
           <li><a href="https://www.linkedin.com/in/sudembulut/">LinkedIn</a></li>
           <li><a href="https://github.com/sudembulut">GitHub</a></li>
+          <li><a href="#meet" data-i18n="intro.book">Book a call →</a></li>
         </ul>
       </div>
       <figure class="portrait">
-        <canvas id="portrait" data-src="assets/portrait.png" role="img" aria-label="ASCII portrait of Sudem Bulut"></canvas>
+        <canvas id="portrait" data-src="assets/portrait.png" role="img" aria-label="ASCII portrait of Sudem Bulut" data-i18n-attr="aria-label:portrait.label"></canvas>
         <noscript><img src="assets/portrait.png" alt="Portrait of Sudem Bulut" width="270" height="400"></noscript>
         <figcaption>
-          <span class="key key-noise">raw observations</span>
-          <span class="key key-signal">filtered estimate</span>
+          <span class="key key-noise" data-i18n="portrait.noise">raw observations</span>
+          <span class="key key-signal" data-i18n="portrait.signal">filtered estimate</span>
         </figcaption>
       </figure>
     </section>
 
     <section class="section reveal" id="about">
-      <h2 class="section-head"><span>01</span> About</h2>
-      <p>I study Mathematical Engineering at Istanbul Technical University, graduating in 2027. The thing that keeps pulling me back is estimation under uncertainty — how you recover something true from measurements that are incomplete, noisy, or both. It shows up in the coursework, and it turns out to be most of the job in practice too.</p>
-      <p>The jobs so far have all sat where data meets a decision: a year on AI data engineering at Amazon, customer experience analytics at Getir, and market research at StartGate. My research sits on the same question in physical form — whether you can estimate how crowded an outdoor space is using cheap radios instead of cameras. It's funded under TÜBİTAK's 2209-A programme, and it can be done without watching anyone.</p>
-      <p>The through-line outside work is handing things over to other people: mentoring a robotics team, teaching CS50x to high-school students, rebuilding a volunteer community. I work in English and Turkish, and I'm slowly making progress in Spanish.</p>
+      <h2 class="section-head"><span>01</span> <b data-i18n="nav.about">About</b></h2>
+      <p data-i18n="about.p1">I study Mathematical Engineering at Istanbul Technical University, graduating in 2027. The thing that keeps pulling me back is estimation under uncertainty — how you recover something true from measurements that are incomplete, noisy, or both. It shows up in the coursework, and it turns out to be most of the job in practice too.</p>
+      <p data-i18n="about.p2">The jobs so far have all sat where data meets a decision: a year on AI data engineering at Amazon, customer experience analytics at Getir, and market research at StartGate. My research sits on the same question in physical form — whether you can estimate how crowded an outdoor space is using cheap radios instead of cameras. It's funded under TÜBİTAK's 2209-A programme, and it can be done without watching anyone.</p>
+      <p data-i18n="about.p3">The through-line outside work is handing things over to other people: mentoring a robotics team, teaching CS50x to high-school students, rebuilding a volunteer community. I work in English and Turkish, and I'm slowly making progress in Spanish.</p>
     </section>
 
     <section class="section reveal" id="experience">
-      <h2 class="section-head"><span>02</span> Experience</h2>
+      <h2 class="section-head"><span>02</span> <b data-i18n="nav.experience">Experience</b></h2>
       <div class="tabs" data-tabs>
-        <div class="tab-list" role="tablist" aria-label="Experience">
+        <div class="tab-list" role="tablist" aria-label="Experience" data-i18n-attr="aria-label:nav.experience">
           <button class="tab" role="tab" id="tab-amazon" aria-controls="panel-amazon" aria-selected="true">Amazon</button>
           <button class="tab" role="tab" id="tab-getir" aria-controls="panel-getir" aria-selected="false">Getir</button>
           <button class="tab" role="tab" id="tab-startgate" aria-controls="panel-startgate" aria-selected="false">StartGate</button>
         </div>
 
         <div class="tab-panel" role="tabpanel" id="panel-amazon" aria-labelledby="tab-amazon" tabindex="0">
-          <h3>Business Intelligence Engineer Intern, Data/AI <span class="at">@ Amazon</span></h3>
-          <p class="when">Jul 2025 — Jul 2026</p>
-          <p>TR Retail Tech team, focused on AI data engineering — efficiency, automation and applied AI.</p>
-          <ul>
+          <h3><span data-i18n="exp.amazon.role">Business Intelligence Engineer Intern, Data/AI</span> <span class="at">@ Amazon</span></h3>
+          <p class="when" data-i18n="exp.amazon.when">Jul 2025 — Jul 2026</p>
+          <p data-i18n="exp.amazon.intro">TR Retail Tech team, focused on AI data engineering — efficiency, automation and applied AI.</p>
+          <ul data-i18n="exp.amazon.list">
             <li>Ran price and performance analysis over a catalogue of roughly 35,000 products with a machine learning model, and turned it into a pricing system that produces a price the team can trust.</li>
             <li>Replaced the manual data flows behind that pricing work with automated ones, cutting eight hours of hand-run work a week.</li>
             <li>Built click and event analytics in the spirit of Mixpanel to reconstruct the customer funnel end to end, exposing where shoppers drop off and which steps were worth fixing first.</li>
@@ -80,9 +86,9 @@
         </div>
 
         <div class="tab-panel" role="tabpanel" id="panel-getir" aria-labelledby="tab-getir" tabindex="0">
-          <h3>Customer Experience Analytics Intern <span class="at">@ Getir</span></h3>
-          <p class="when">Feb 2024 — Jan 2025</p>
-          <ul>
+          <h3><span data-i18n="exp.getir.role">Customer Experience Analytics Intern</span> <span class="at">@ Getir</span></h3>
+          <p class="when" data-i18n="exp.getir.when">Feb 2024 — Jan 2025</p>
+          <ul data-i18n="exp.getir.list">
             <li>Led reporting of customer experience metrics to C-level executives, delivering insights behind strategic decisions.</li>
             <li>Built and maintained dashboards tracking KPIs and customer feedback across channels.</li>
             <li>Worked with cross-functional teams on data-driven improvements to the customer journey.</li>
@@ -90,9 +96,9 @@
         </div>
 
         <div class="tab-panel" role="tabpanel" id="panel-startgate" aria-labelledby="tab-startgate" tabindex="0">
-          <h3>Business Development Intern <span class="at">@ StartGate</span></h3>
-          <p class="when">Sep 2023 — Feb 2024</p>
-          <ul>
+          <h3><span data-i18n="exp.startgate.role">Business Development Intern</span> <span class="at">@ StartGate</span></h3>
+          <p class="when" data-i18n="exp.startgate.when">Sep 2023 — Feb 2024</p>
+          <ul data-i18n="exp.startgate.list">
             <li>Worked at a digital game entrepreneurship centre serving the EU and MENAT region as both accelerator and incubator.</li>
             <li>Conducted market research and analysis, delivering findings as clear, data-driven reports.</li>
           </ul>
@@ -101,9 +107,9 @@
     </section>
 
     <section class="section reveal" id="community">
-      <h2 class="section-head"><span>03</span> Community</h2>
+      <h2 class="section-head"><span>03</span> <b data-i18n="nav.community">Community</b></h2>
       <div class="tabs" data-tabs>
-        <div class="tab-list" role="tablist" aria-label="Community">
+        <div class="tab-list" role="tablist" aria-label="Community" data-i18n-attr="aria-label:nav.community">
           <button class="tab" role="tab" id="tab-teamnf" aria-controls="panel-teamnf" aria-selected="true">Team NF</button>
           <button class="tab" role="tab" id="tab-tog" aria-controls="panel-tog" aria-selected="false">TOG</button>
           <button class="tab" role="tab" id="tab-mekupte" aria-controls="panel-mekupte" aria-selected="false">MEKÜPTE</button>
@@ -111,9 +117,9 @@
         </div>
 
         <div class="tab-panel" role="tabpanel" id="panel-teamnf" aria-labelledby="tab-teamnf" tabindex="0">
-          <h3>Robotics Team Mentor <span class="at">@ Team NF</span></h3>
-          <p class="when">Jul 2023 — Jun 2026</p>
-          <ul>
+          <h3><span data-i18n="com.teamnf.role">Robotics Team Mentor</span> <span class="at">@ Team NF</span></h3>
+          <p class="when" data-i18n="com.teamnf.when">Jul 2023 — Jun 2026</p>
+          <ul data-i18n="com.teamnf.list">
             <li>Mentored students across STEAM fields through hands-on learning and team collaboration.</li>
             <li>Helped shape the team's vision and structure, led training sessions and organised internal workflows.</li>
             <li>Led sponsorship efforts and coordinated cross-functional projects for long-term sustainability.</li>
@@ -123,9 +129,9 @@
         </div>
 
         <div class="tab-panel" role="tabpanel" id="panel-tog" aria-labelledby="tab-tog" tabindex="0">
-          <h3>Community Coordinator, ITU chapter <span class="at">@ Toplum Gönüllüleri Vakfı</span></h3>
-          <p class="when">Dec 2022 — Aug 2024</p>
-          <ul>
+          <h3><span data-i18n="com.tog.role">Community Coordinator, ITU chapter</span> <span class="at">@ Toplum Gönüllüleri Vakfı</span></h3>
+          <p class="when" data-i18n="com.tog.when">Dec 2022 — Aug 2024</p>
+          <ul data-i18n="com.tog.list">
             <li>Rebuilt and led the ITU TOG community after a five-year break, forming an active volunteer network of over 100 members.</li>
             <li>Planned and coordinated events to drive student engagement and social responsibility.</li>
             <li>Managed a team of volunteers.</li>
@@ -133,15 +139,15 @@
         </div>
 
         <div class="tab-panel" role="tabpanel" id="panel-mekupte" aria-labelledby="tab-mekupte" tabindex="0">
-          <h3>Organization Scrum Team Developer <span class="at">@ MEKÜPTE</span></h3>
-          <p class="when">May 2023 — Oct 2023</p>
-          <p>Ran research, content and community events for the Mathematics and Mathematics Engineering Society, promoting mathematics, science and technology within Scrum practice.</p>
+          <h3><span data-i18n="com.mekupte.role">Organization Scrum Team Developer</span> <span class="at">@ MEKÜPTE</span></h3>
+          <p class="when" data-i18n="com.mekupte.when">May 2023 — Oct 2023</p>
+          <p data-i18n="com.mekupte.text">Ran research, content and community events for the Mathematics and Mathematics Engineering Society, promoting mathematics, science and technology within Scrum practice.</p>
         </div>
 
         <div class="tab-panel" role="tabpanel" id="panel-kodluyoruz" aria-labelledby="tab-kodluyoruz" tabindex="0">
-          <h3>CS50x Fellow <span class="at">@ Kodluyoruz</span></h3>
-          <p class="when">Nov 2020 — Sep 2021</p>
-          <ul>
+          <h3><span data-i18n="com.kodluyoruz.role">CS50x Fellow</span> <span class="at">@ Kodluyoruz</span></h3>
+          <p class="when" data-i18n="com.kodluyoruz.when">Nov 2020 — Sep 2021</p>
+          <ul data-i18n="com.kodluyoruz.list">
             <li>Guided 26 high-school students from cities across Anatolia through Harvard's CS50x computer science course.</li>
             <li>Wrote weekly games, quizzes and presentations, sustaining an interactive online classroom through the pandemic.</li>
           </ul>
@@ -150,41 +156,83 @@
     </section>
 
     <section class="section reveal" id="projects">
-      <h2 class="section-head"><span>04</span> Projects</h2>
+      <h2 class="section-head"><span>04</span> <b data-i18n="nav.projects">Projects</b></h2>
 
       <article class="card">
-        <p class="card-meta">Research · TÜBİTAK 2209-A · 2026</p>
-        <h3>Real-time regional density detection in outdoor spaces using a low-cost IoT network</h3>
-        <p>Can you estimate crowd density and movement outdoors without expensive cameras or GSM data? Low-cost ESP32 nodes passively observe Wi-Fi signal patterns in the environment. Outdoor RSSI is badly behaved — it reflects off buildings, gets blocked by people and vehicles, and shifts constantly — so rather than chasing exact positions, the problem is framed as regional classification: readings from several reference sensors form a distinct fingerprint for each zone. A machine learning model learns those fingerprints, and Kalman filtering suppresses noise enough to expose movement trends over time.</p>
-        <p>The result estimates density and flow direction cheaply, at an anonymous and aggregate level — no one is identified or tracked. First field data was collected in Taksim Square.</p>
+        <p class="card-meta" data-i18n="proj.crowd.meta">Research · TÜBİTAK 2209-A · 2026</p>
+        <h3 data-i18n="proj.crowd.title">Real-time regional density detection in outdoor spaces using a low-cost IoT network</h3>
+        <p data-i18n="proj.crowd.p1">Can you estimate crowd density and movement outdoors without expensive cameras or GSM data? Low-cost ESP32 nodes passively observe Wi-Fi signal patterns in the environment. Outdoor RSSI is badly behaved — it reflects off buildings, gets blocked by people and vehicles, and shifts constantly — so rather than chasing exact positions, the problem is framed as regional classification: readings from several reference sensors form a distinct fingerprint for each zone. A machine learning model learns those fingerprints, and Kalman filtering suppresses noise enough to expose movement trends over time.</p>
+        <p data-i18n="proj.crowd.p2">The result estimates density and flow direction cheaply, at an anonymous and aggregate level — no one is identified or tracked. First field data was collected in Taksim Square.</p>
         <ul class="tags">
           <li>ESP32</li>
           <li>Wi-Fi RSSI</li>
           <li>Fingerprinting</li>
-          <li>Kalman filter</li>
-          <li>Sensor fusion</li>
-          <li>Machine learning</li>
+          <li data-i18n="proj.tag.kalman">Kalman filter</li>
+          <li data-i18n="proj.tag.fusion">Sensor fusion</li>
+          <li data-i18n="proj.tag.ml">Machine learning</li>
         </ul>
-        <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7463634606794268672/">Project announcement →</a>
+        <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7463634606794268672/" data-i18n="proj.crowd.link">Project announcement →</a>
       </article>
 
       <article class="card">
-        <p class="card-meta">Competition · First place · 2026</p>
-        <h3>Proactive GenAI for mobile experience failures</h3>
-        <p>Built for the Akbank Case Marathon, hosted with the ITU Mathematics and Computer Club. The brief was the ordinary misery of mobile banking: battery drain, biometric authentication failures, crashes. Most fixes are reactive — something breaks, the user complains, someone investigates. We built an autonomous GenAI system that resolves the issues as they surface, so the fault is handled before it reaches the customer. The entry took first place.</p>
+        <p class="card-meta" data-i18n="proj.akbank.meta">Competition · First place · 2026</p>
+        <h3 data-i18n="proj.akbank.title">Proactive GenAI for mobile experience failures</h3>
+        <p data-i18n="proj.akbank.p1">Built for the Akbank Case Marathon, hosted with the ITU Mathematics and Computer Club. The brief was the ordinary misery of mobile banking: battery drain, biometric authentication failures, crashes. Most fixes are reactive — something breaks, the user complains, someone investigates. We built an autonomous GenAI system that resolves the issues as they surface, so the fault is handled before it reaches the customer. The entry took first place.</p>
         <ul class="tags">
           <li>Generative AI</li>
-          <li>Autonomous agents</li>
-          <li>Mobile telemetry</li>
+          <li data-i18n="proj.tag.agents">Autonomous agents</li>
+          <li data-i18n="proj.tag.telemetry">Mobile telemetry</li>
         </ul>
-        <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7407645882562768897/">Competition write-up →</a>
+        <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7407645882562768897/" data-i18n="proj.akbank.link">Competition write-up →</a>
       </article>
     </section>
 
-    <section class="section reveal contact" id="contact">
-      <h2 class="section-head"><span>05</span> Contact</h2>
-      <p class="lead">The fastest way to reach me is email.</p>
-      <p><a class="button" href="mailto:sudembulut@hotmail.com">sudembulut@hotmail.com</a></p>
+    <section class="section reveal" id="meet">
+      <h2 class="section-head"><span>05</span> <b data-i18n="meet.head">Let's meet</b></h2>
+      <p class="lead" data-i18n="meet.lead">I love meeting interesting people.</p>
+      <p data-i18n="meet.text">If you'd like to talk — about research, data, robotics, community building or something else entirely — pick a 30-minute slot and let's get to know each other.</p>
+
+      <div class="booking" id="booking" data-cal-user="sudembulut" data-cal-event="30min" data-email="sudembulut@hotmail.com" data-channel="video">
+        <button class="button button-solid bk-toggle" type="button" aria-expanded="false" aria-controls="bk-panel"><span data-i18n="bk.toggle">Book a 30-min call</span> <span aria-hidden="true">→</span></button>
+        <p class="bk-share" data-i18n="bk.share">Sending this to someone else? Share <a href="book.html">sudembulut.com/book</a></p>
+        <div class="bk-panel" id="bk-panel" hidden>
+          <div class="bk-channel" role="group" aria-label="How would you like to talk?" data-i18n-attr="aria-label:bk.how">
+            <span data-i18n="bk.how">How would you like to talk?</span>
+            <button type="button" data-channel="video" aria-pressed="true" data-i18n="bk.video">Video call</button>
+            <button type="button" data-channel="email" aria-pressed="false" data-i18n="bk.byEmail">By email</button>
+          </div>
+
+          <div class="bk-video">
+            <div class="bk-cal">
+              <div class="bk-head">
+                <button type="button" class="bk-nav bk-prev" aria-label="Previous month">←</button>
+                <div class="bk-month" aria-live="polite"></div>
+                <button type="button" class="bk-nav bk-next" aria-label="Next month">→</button>
+              </div>
+              <div class="bk-dow" aria-hidden="true"></div>
+              <div class="bk-days"></div>
+              <p class="bk-tz"></p>
+            </div>
+            <div class="bk-side">
+              <div class="bk-times" aria-live="polite"></div>
+              <form class="bk-form">
+                <p class="bk-summary"></p>
+                <label><span data-i18n="bk.name">Name</span><input name="name" required autocomplete="name"></label>
+                <label><span data-i18n="bk.email">Email</span><input name="email" type="email" required autocomplete="email"></label>
+                <label><span data-i18n="bk.notes">What would you like to talk about? <em>(optional)</em></span><textarea name="notes" rows="3"></textarea></label>
+                <button type="submit" class="button button-solid" data-i18n="bk.submit">Book this time</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="bk-mail">
+            <p data-i18n="bk.mailText">Prefer writing? Tell me a little about yourself and what you'd like to talk about — I read everything.</p>
+            <a class="button" href="mailto:sudembulut@hotmail.com?subject=Hello%20Sudem" data-i18n="bk.mailBtn">Write to me →</a>
+          </div>
+
+          <p class="bk-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
     </section>
 
   </div>
@@ -193,11 +241,14 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>Sudem Bulut · İstanbul</span>
-    <span><a href="https://www.linkedin.com/in/sudembulut/">LinkedIn</a> · <a href="https://github.com/sudembulut">GitHub</a></span>
+    <span><a href="mailto:sudembulut@hotmail.com">sudembulut@hotmail.com</a> · <a href="https://www.linkedin.com/in/sudembulut/">LinkedIn</a> · <a href="https://github.com/sudembulut">GitHub</a></span>
   </div>
 </footer>
 
+<script src="js/lang-tr.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/portrait.js"></script>
 <script src="js/main.js"></script>
+<script src="js/booking.js"></script>
 </body>
 </html>

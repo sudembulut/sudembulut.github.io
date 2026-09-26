@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="book.title">Let's meet for 30 minutes</title>
+<meta name="description" content="Book a 30-minute call with Sudem Bulut.">
+<meta name="theme-color" content="#0c1119">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 22C8 22 10 10 16 10S24 20 30 18' fill='none' stroke='%236f9bff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Sudem Bulut</a>
+    <div class="lang-toggle" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="section book-page">
+      <p class="eyebrow"><a href="index.html" data-i18n="book.back">← sudembulut.com</a></p>
+      <h1 data-i18n="meet.head">Let's meet</h1>
+      <p class="lead" data-i18n="meet.lead">I love meeting interesting people.</p>
+      <p data-i18n="meet.text">If you'd like to talk — about research, data, robotics, community building or something else entirely — pick a 30-minute slot and let's get to know each other.</p>
+      <div class="booking" id="booking" data-open data-cal-user="sudembulut" data-cal-event="30min" data-email="sudembulut@hotmail.com" data-channel="video">
+        <button class="button button-solid bk-toggle" type="button" aria-expanded="false" aria-controls="bk-panel"><span data-i18n="bk.toggle">Book a 30-min call</span> <span aria-hidden="true">→</span></button>
+        <p class="bk-share" data-i18n="bk.share">Sending this to someone else? Share <a href="book.html">sudembulut.com/book</a></p>
+        <div class="bk-panel" id="bk-panel" hidden>
+          <div class="bk-channel" role="group" aria-label="How would you like to talk?" data-i18n-attr="aria-label:bk.how">
+            <span data-i18n="bk.how">How would you like to talk?</span>
+            <button type="button" data-channel="video" aria-pressed="true" data-i18n="bk.video">Video call</button>
+            <button type="button" data-channel="email" aria-pressed="false" data-i18n="bk.byEmail">By email</button>
+          </div>
+
+          <div class="bk-video">
+            <div class="bk-cal">
+              <div class="bk-head">
+                <button type="button" class="bk-nav bk-prev" aria-label="Previous month">←</button>
+                <div class="bk-month" aria-live="polite"></div>
+                <button type="button" class="bk-nav bk-next" aria-label="Next month">→</button>
+              </div>
+              <div class="bk-dow" aria-hidden="true"></div>
+              <div class="bk-days"></div>
+              <p class="bk-tz"></p>
+            </div>
+            <div class="bk-side">
+              <div class="bk-times" aria-live="polite"></div>
+              <form class="bk-form">
+                <p class="bk-summary"></p>
+                <label><span data-i18n="bk.name">Name</span><input name="name" required autocomplete="name"></label>
+                <label><span data-i18n="bk.email">Email</span><input name="email" type="email" required autocomplete="email"></label>
+                <label><span data-i18n="bk.notes">What would you like to talk about? <em>(optional)</em></span><textarea name="notes" rows="3"></textarea></label>
+                <button type="submit" class="button button-solid" data-i18n="bk.submit">Book this time</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="bk-mail">
+            <p data-i18n="bk.mailText">Prefer writing? Tell me a little about yourself and what you'd like to talk about — I read everything.</p>
+            <a class="button" href="mailto:sudembulut@hotmail.com?subject=Hello%20Sudem" data-i18n="bk.mailBtn">Write to me →</a>
+          </div>
+
+          <p class="bk-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="js/lang-tr.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
