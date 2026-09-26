@@ -5,21 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sudem Bulut</title>
 <meta name="description" content="Sudem Bulut — Mathematical Engineering at Istanbul Technical University, researching low-cost sensing for outdoor crowd density.">
+<meta name="theme-color" content="#0c1119">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 22C8 22 10 10 16 10S24 20 30 18' fill='none' stroke='%230a47f0' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 22C8 22 10 10 16 10S24 20 30 18' fill='none' stroke='%236f9bff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html">Sudem Bulut</a>
+    <a class="brand" href="#intro">Sudem Bulut</a>
     <nav class="nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#community">Community</a>
+      <a href="#projects">Projects</a>
       <a href="cv.html">CV</a>
     </nav>
   </div>
@@ -28,17 +30,20 @@
 <main>
   <div class="wrap">
 
-    <section class="hero">
-      <p class="eyebrow">Mathematical Engineering · İstanbul</p>
-      <h1>Sudem Bulut</h1>
-      <p class="lead">I'm a Mathematical Engineering student at Istanbul Technical University. My work is mostly about pulling usable signal out of noisy measurements — right now, estimating how crowded an outdoor space is using cheap radios instead of cameras.</p>
-
-      <figure class="signal">
-        <svg viewBox="0 42 800 122" role="img" aria-labelledby="signal-title">
-          <title id="signal-title">A noisy sensor trace with a smoothed estimate drawn through it</title>
-          <polyline class="trace-noise" points="0,149 16,125 32,142 48,153 64,126 80,129 96,142 112,112 128,131 144,124 160,107 176,131 192,108 208,119 224,97 240,111 256,115 272,95 288,113 304,92 320,83 336,93 352,94 368,63 384,81 400,68 416,81 432,55 448,65 464,79 480,56 496,71 512,51 528,69 544,76 560,56 576,74 592,86 608,74 624,71 640,95 656,76 672,88 688,94 704,74 720,86 736,70 752,91 768,94 784,80 800,89"></polyline>
-          <path class="trace-signal" d="M0,140 C120,140 160,105 240,108 S380,70 470,62 S620,88 800,84"></path>
-        </svg>
+    <section class="intro" id="intro">
+      <div class="intro-text">
+        <p class="eyebrow">Mathematical Engineering · İstanbul</p>
+        <h1>Sudem Bulut</h1>
+        <p class="lead">I'm a Mathematical Engineering student at Istanbul Technical University. My work is mostly about pulling usable signal out of noisy measurements — right now, estimating how crowded an outdoor space is using cheap radios instead of cameras.</p>
+        <ul class="links">
+          <li><a href="mailto:sudembulut@hotmail.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/sudembulut/">LinkedIn</a></li>
+          <li><a href="https://github.com/sudembulut">GitHub</a></li>
+        </ul>
+      </div>
+      <figure class="portrait">
+        <canvas id="portrait" data-src="assets/portrait.png" role="img" aria-label="ASCII portrait of Sudem Bulut"></canvas>
+        <noscript><img src="assets/portrait.png" alt="Portrait of Sudem Bulut" width="270" height="400"></noscript>
         <figcaption>
           <span class="key key-noise">raw observations</span>
           <span class="key key-signal">filtered estimate</span>
@@ -46,16 +51,140 @@
       </figure>
     </section>
 
-    <section class="section">
-      <h2 class="section-head">Currently</h2>
-      <p>I'm finishing my degree and running a TÜBİTAK-funded research project on reading crowd density from Wi-Fi signal patterns — low-cost sensors, noisy data, and an estimate that stays anonymous by design.</p>
-      <p>Most recently I spent a year as a business intelligence engineering intern at Amazon, on the TR Retail Tech team, and before that a year on customer experience analytics at Getir. Running alongside all of it: several years mentoring robotics students and building student communities, which is still the part of the work I'd defend hardest.</p>
+    <section class="section reveal" id="about">
+      <h2 class="section-head"><span>01</span> About</h2>
+      <p>I study Mathematical Engineering at Istanbul Technical University, graduating in 2027. The thing that keeps pulling me back is estimation under uncertainty — how you recover something true from measurements that are incomplete, noisy, or both. It shows up in the coursework, and it turns out to be most of the job in practice too.</p>
+      <p>The jobs so far have all sat where data meets a decision: a year on AI data engineering at Amazon, customer experience analytics at Getir, and market research at StartGate. My research sits on the same question in physical form — whether you can estimate how crowded an outdoor space is using cheap radios instead of cameras. It's funded under TÜBİTAK's 2209-A programme, and it can be done without watching anyone.</p>
+      <p>The through-line outside work is handing things over to other people: mentoring a robotics team, teaching CS50x to high-school students, rebuilding a volunteer community. I work in English and Turkish, and I'm slowly making progress in Spanish.</p>
+    </section>
 
-      <ul class="links">
-        <li><a href="mailto:sudembulut@hotmail.com">sudembulut@hotmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/sudembulut/">LinkedIn</a></li>
-        <li><a href="https://github.com/sudembulut">GitHub</a></li>
-      </ul>
+    <section class="section reveal" id="experience">
+      <h2 class="section-head"><span>02</span> Experience</h2>
+      <div class="tabs" data-tabs>
+        <div class="tab-list" role="tablist" aria-label="Experience">
+          <button class="tab" role="tab" id="tab-amazon" aria-controls="panel-amazon" aria-selected="true">Amazon</button>
+          <button class="tab" role="tab" id="tab-getir" aria-controls="panel-getir" aria-selected="false">Getir</button>
+          <button class="tab" role="tab" id="tab-startgate" aria-controls="panel-startgate" aria-selected="false">StartGate</button>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-amazon" aria-labelledby="tab-amazon" tabindex="0">
+          <h3>Business Intelligence Engineer Intern, Data/AI <span class="at">@ Amazon</span></h3>
+          <p class="when">Jul 2025 — Jul 2026</p>
+          <p>TR Retail Tech team, focused on AI data engineering — efficiency, automation and applied AI.</p>
+          <ul>
+            <li>Ran price and performance analysis over a catalogue of roughly 35,000 products with a machine learning model, and turned it into a pricing system that produces a price the team can trust.</li>
+            <li>Replaced the manual data flows behind that pricing work with automated ones, cutting eight hours of hand-run work a week.</li>
+            <li>Built click and event analytics in the spirit of Mixpanel to reconstruct the customer funnel end to end, exposing where shoppers drop off and which steps were worth fixing first.</li>
+            <li>Grew sales of imported products off the back of that analysis.</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-getir" aria-labelledby="tab-getir" tabindex="0">
+          <h3>Customer Experience Analytics Intern <span class="at">@ Getir</span></h3>
+          <p class="when">Feb 2024 — Jan 2025</p>
+          <ul>
+            <li>Led reporting of customer experience metrics to C-level executives, delivering insights behind strategic decisions.</li>
+            <li>Built and maintained dashboards tracking KPIs and customer feedback across channels.</li>
+            <li>Worked with cross-functional teams on data-driven improvements to the customer journey.</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-startgate" aria-labelledby="tab-startgate" tabindex="0">
+          <h3>Business Development Intern <span class="at">@ StartGate</span></h3>
+          <p class="when">Sep 2023 — Feb 2024</p>
+          <ul>
+            <li>Worked at a digital game entrepreneurship centre serving the EU and MENAT region as both accelerator and incubator.</li>
+            <li>Conducted market research and analysis, delivering findings as clear, data-driven reports.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="community">
+      <h2 class="section-head"><span>03</span> Community</h2>
+      <div class="tabs" data-tabs>
+        <div class="tab-list" role="tablist" aria-label="Community">
+          <button class="tab" role="tab" id="tab-teamnf" aria-controls="panel-teamnf" aria-selected="true">Team NF</button>
+          <button class="tab" role="tab" id="tab-tog" aria-controls="panel-tog" aria-selected="false">TOG</button>
+          <button class="tab" role="tab" id="tab-mekupte" aria-controls="panel-mekupte" aria-selected="false">MEKÜPTE</button>
+          <button class="tab" role="tab" id="tab-kodluyoruz" aria-controls="panel-kodluyoruz" aria-selected="false">Kodluyoruz</button>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-teamnf" aria-labelledby="tab-teamnf" tabindex="0">
+          <h3>Robotics Team Mentor <span class="at">@ Team NF</span></h3>
+          <p class="when">Jul 2023 — Jun 2026</p>
+          <ul>
+            <li>Mentored students across STEAM fields through hands-on learning and team collaboration.</li>
+            <li>Helped shape the team's vision and structure, led training sessions and organised internal workflows.</li>
+            <li>Led sponsorship efforts and coordinated cross-functional projects for long-term sustainability.</li>
+            <li>Supported planning of community-focused events.</li>
+            <li>The team competed at the 2025 season World Championship in the United States and received multiple awards.</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-tog" aria-labelledby="tab-tog" tabindex="0">
+          <h3>Community Coordinator, ITU chapter <span class="at">@ Toplum Gönüllüleri Vakfı</span></h3>
+          <p class="when">Dec 2022 — Aug 2024</p>
+          <ul>
+            <li>Rebuilt and led the ITU TOG community after a five-year break, forming an active volunteer network of over 100 members.</li>
+            <li>Planned and coordinated events to drive student engagement and social responsibility.</li>
+            <li>Managed a team of volunteers.</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-mekupte" aria-labelledby="tab-mekupte" tabindex="0">
+          <h3>Organization Scrum Team Developer <span class="at">@ MEKÜPTE</span></h3>
+          <p class="when">May 2023 — Oct 2023</p>
+          <p>Ran research, content and community events for the Mathematics and Mathematics Engineering Society, promoting mathematics, science and technology within Scrum practice.</p>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-kodluyoruz" aria-labelledby="tab-kodluyoruz" tabindex="0">
+          <h3>CS50x Fellow <span class="at">@ Kodluyoruz</span></h3>
+          <p class="when">Nov 2020 — Sep 2021</p>
+          <ul>
+            <li>Guided 26 high-school students from cities across Anatolia through Harvard's CS50x computer science course.</li>
+            <li>Wrote weekly games, quizzes and presentations, sustaining an interactive online classroom through the pandemic.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+      <h2 class="section-head"><span>04</span> Projects</h2>
+
+      <article class="card">
+        <p class="card-meta">Research · TÜBİTAK 2209-A · 2026</p>
+        <h3>Real-time regional density detection in outdoor spaces using a low-cost IoT network</h3>
+        <p>Can you estimate crowd density and movement outdoors without expensive cameras or GSM data? Low-cost ESP32 nodes passively observe Wi-Fi signal patterns in the environment. Outdoor RSSI is badly behaved — it reflects off buildings, gets blocked by people and vehicles, and shifts constantly — so rather than chasing exact positions, the problem is framed as regional classification: readings from several reference sensors form a distinct fingerprint for each zone. A machine learning model learns those fingerprints, and Kalman filtering suppresses noise enough to expose movement trends over time.</p>
+        <p>The result estimates density and flow direction cheaply, at an anonymous and aggregate level — no one is identified or tracked. First field data was collected in Taksim Square.</p>
+        <ul class="tags">
+          <li>ESP32</li>
+          <li>Wi-Fi RSSI</li>
+          <li>Fingerprinting</li>
+          <li>Kalman filter</li>
+          <li>Sensor fusion</li>
+          <li>Machine learning</li>
+        </ul>
+        <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7463634606794268672/">Project announcement →</a>
+      </article>
+
+      <article class="card">
+        <p class="card-meta">Competition · First place · 2026</p>
+        <h3>Proactive GenAI for mobile experience failures</h3>
+        <p>Built for the Akbank Case Marathon, hosted with the ITU Mathematics and Computer Club. The brief was the ordinary misery of mobile banking: battery drain, biometric authentication failures, crashes. Most fixes are reactive — something breaks, the user complains, someone investigates. We built an autonomous GenAI system that resolves the issues as they surface, so the fault is handled before it reaches the customer. The entry took first place.</p>
+        <ul class="tags">
+          <li>Generative AI</li>
+          <li>Autonomous agents</li>
+          <li>Mobile telemetry</li>
+        </ul>
+        <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7407645882562768897/">Competition write-up →</a>
+      </article>
+    </section>
+
+    <section class="section reveal contact" id="contact">
+      <h2 class="section-head"><span>05</span> Contact</h2>
+      <p class="lead">The fastest way to reach me is email.</p>
+      <p><a class="button" href="mailto:sudembulut@hotmail.com">sudembulut@hotmail.com</a></p>
     </section>
 
   </div>
@@ -64,9 +193,11 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>Sudem Bulut · İstanbul</span>
-    <span><a href="mailto:sudembulut@hotmail.com">sudembulut@hotmail.com</a></span>
+    <span><a href="https://www.linkedin.com/in/sudembulut/">LinkedIn</a> · <a href="https://github.com/sudembulut">GitHub</a></span>
   </div>
 </footer>
 
+<script src="js/portrait.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
