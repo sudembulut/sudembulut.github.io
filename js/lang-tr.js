@@ -17,8 +17,6 @@ window.LANG_TR = {
   "intro.email": "E-posta",
   "intro.book": "Görüşme ayarla →",
   "portrait.label": "Sudem Bulut'un ASCII portresi",
-  "portrait.noise": "ham gözlemler",
-  "portrait.signal": "filtrelenmiş tahmin",
 
   // about
   "about.p1": "İstanbul Teknik Üniversitesi'nde Matematik Mühendisliği okuyorum, 2027'de mezun olacağım. Beni sürekli geri çeken konu belirsizlik altında tahmin: eksik, gürültülü ya da ikisi birden olan ölçümlerden doğru olanı nasıl geri kazandığın. Derslerde karşıma çıkıyor, pratikte de işin büyük kısmının bu olduğu ortaya çıkıyor.",

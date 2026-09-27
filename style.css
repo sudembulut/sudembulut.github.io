@@ -258,8 +258,8 @@ h1 + .lead { margin-top: 1.5rem; }
 
 .portrait canvas {
   display: block;
-  width: 420px;
-  height: 420px;
+  width: 500px;
+  height: 500px;
   cursor: crosshair;
   touch-action: pan-y;
 }
@@ -271,31 +271,15 @@ h1 + .lead { margin-top: 1.5rem; }
   filter: grayscale(1) sepia(1) hue-rotate(180deg) saturate(2);
 }
 
-.portrait figcaption {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.4rem 1.5rem;
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--ink-soft);
-  margin-top: 0.75rem;
+/* The portrait sits centred in a square canvas with ~110px of empty space on its
+   left. Tuck that space under the text column so the headline keeps one line. */
+@media (min-width: 801px) {
+  .portrait canvas { margin-left: -90px; }
+  .intro-text { position: relative; z-index: 1; }
 }
-
-.key { display: inline-flex; align-items: center; gap: 0.5rem; }
-
-.key::before {
-  content: "";
-  width: 1.5rem;
-  height: 0;
-  border-top: 2px solid currentColor;
-}
-
-.key-noise { color: var(--noise); }
-.key-signal { color: var(--signal); }
 
 @media (max-width: 768px) {
-  .portrait canvas { width: 300px; height: 300px; }
+  .portrait canvas { width: 380px; height: 380px; }
 }
 
 @media (max-width: 800px) {
@@ -308,7 +292,7 @@ h1 + .lead { margin-top: 1.5rem; }
 }
 
 @media (max-width: 480px) {
-  .portrait canvas { width: 240px; height: 240px; }
+  .portrait canvas { width: min(320px, 100vw - 2rem); height: min(320px, 100vw - 2rem); }
 }
 
 /* ---------- tabs ---------- */
@@ -778,17 +762,19 @@ h1 + .lead { margin-top: 1.5rem; }
 
 @media (max-width: 720px) {
   .site-header .wrap { flex-wrap: wrap; padding-block: 0.6rem; row-gap: 0.4rem; }
+  /* wrap rather than scroll: a hidden-overflow row buried the last links
+     (CV, and more with the longer Turkish labels) off-screen */
   .nav {
     order: 3;
     width: 100%;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.1rem 0.7rem;
     font-size: 0.75rem;
     letter-spacing: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
   }
-  .nav a { white-space: nowrap; }
-  html { scroll-padding-top: 6.5rem; }
+  /* taller hit area on touch without changing how the row looks */
+  .nav a { white-space: nowrap; padding-block: 0.55rem; margin-block: -0.4rem; }
+  html { scroll-padding-top: 7.75rem; }
 }
 
 /* ---------- 404 ---------- */

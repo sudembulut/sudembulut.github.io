@@ -11,13 +11,17 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function sizeFor(width) {
-    if (width <= 480) return 240;
-    if (width <= 768) return 300;
-    return 420;
+    // keep a 16px gutter on each side on the narrowest phones
+    if (width <= 480) return Math.min(320, width - 32);
+    if (width <= 768) return 380;
+    // two-column layout, but still too narrow for the full size beside the text
+    if (width <= 1000) return 420;
+    return 500;
   }
 
   function fontFor(size) {
-    return size <= 280 ? 5 : 7;
+    if (size <= 340) return 6;
+    return size <= 420 ? 7 : 8;
   }
 
   // Turn the image into a grid of characters sized for a square canvas of `size` px.
