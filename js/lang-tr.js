@@ -101,7 +101,7 @@ window.LANG_TR = {
   "bk.mailBtn": "Bana yaz →",
 
   // book page
-  "book.title": "30 dakika tanışalım",
+  "book.title": "30 dakika tanışalım — Sudem Bulut",
   "book.back": "← sudembulut.com",
 
   // cv page
