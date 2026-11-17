@@ -220,8 +220,8 @@ img { display: block; max-width: 100%; height: auto; }
 .timeline::before { content: ""; position: absolute; left: 0; right: 0; top: 20px; height: 3px; background: var(--gece); }
 .timeline li { position: relative; }
 .timeline li::before {
-  content: ""; position: absolute; top: -45px; left: 0; width: 30px; height: 20px;
-  background: url("assets/zaaf/zaaf-amblem-ic-alarm.svg") left center / 20px 20px no-repeat, var(--kemik);
+  content: ""; position: absolute; top: -45px; left: -8px; width: 36px; height: 20px;
+  background: url("assets/zaaf/zaaf-amblem-ic-alarm.svg") center / 20px 20px no-repeat, var(--kemik);
 }
 .timeline h3 { font-weight: 900; font-size: clamp(28px, 2.6vw, 42px); letter-spacing: -.04em; line-height: .95; margin: 8px 0 12px; }
 .timeline h3 + p { font-size: 15px; line-height: 1.5; color: var(--murekkep); }
@@ -286,7 +286,7 @@ img { display: block; max-width: 100%; height: auto; }
 
   .timeline { grid-template-columns: 1fr; padding-top: 0; padding-left: 40px; gap: 32px; }
   .timeline::before { left: 10px; right: auto; top: 0; bottom: 0; width: 3px; height: auto; }
-  .timeline li::before { top: 0; left: -40px; width: 24px; height: 26px; background-position: center top; background-size: 20px 20px; }
+  .timeline li::before { top: -8px; left: -40px; width: 24px; height: 36px; background-position: center; background-size: 20px 20px; }
 
   .certs { grid-template-columns: 1fr; }
   .cert { flex-direction: column; align-items: flex-start; }
