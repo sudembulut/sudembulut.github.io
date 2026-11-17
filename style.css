@@ -271,6 +271,7 @@ img { display: block; max-width: 100%; height: auto; }
 
   .bento { grid-template-columns: 1fr; }
   .bento .tile { grid-column: auto; grid-row: auto; }
+  .wave { display: none; }
 
   .timeline { grid-template-columns: 1fr; padding-top: 0; padding-left: 40px; gap: 32px; }
   .timeline::before { left: 10px; right: auto; top: 0; bottom: 0; width: 3px; height: auto; }
