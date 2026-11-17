@@ -20,4 +20,17 @@
     { rootMargin: "-40% 0px -50% 0px" }
   );
   links.forEach((_, section) => observer.observe(section));
+
+  // The hero has no link of its own: clear the highlight when it is in view.
+  const intro = document.getElementById("intro");
+  if (intro) {
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) links.forEach((l) => l.removeAttribute("aria-current"));
+        });
+      },
+      { rootMargin: "-40% 0px -50% 0px" }
+    ).observe(intro);
+  }
 })();

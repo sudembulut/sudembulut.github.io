@@ -14,8 +14,17 @@
   function boxFor(canvas) {
     const w = Math.max(200, Math.round(canvas.parentElement.clientWidth));
     const narrow = window.innerWidth <= 800;
-    const h = Math.round(Math.min(window.innerHeight * (narrow ? 0.6 : 0.8), 760, w * 1.35));
+    // Narrow: height depends on width only, so mobile toolbar collapse never changes it.
+    const h = narrow ? Math.round(w * 1.25) : Math.round(Math.min(window.innerHeight * 0.8, 760, w * 1.35));
     return { w, h, font: narrow ? (w <= 360 ? 6 : 7) : (w <= 520 ? 8 : 9) };
+  }
+
+  function debounce(fn, ms) {
+    let t = 0;
+    return function () {
+      clearTimeout(t);
+      t = setTimeout(fn, ms);
+    };
   }
 
   // Turn the image into a grid of characters for a w×h canvas.
@@ -84,7 +93,10 @@
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const key = `${box.w}x${box.h}`;
-      cache[key] = cache[key] || sample(img, box.w, box.h, box.font);
+      if (!cache[key]) {
+        Object.keys(cache).forEach((k) => delete cache[k]); // keep only the current size
+        cache[key] = sample(img, box.w, box.h, box.font);
+      }
       const spread = 400 * (box.w / 420);
       particles = cache[key].map((p) => ({
         ...p,
@@ -195,12 +207,12 @@
       if (reducedMotion) {
         setup(false);
         draw(10);
-        window.addEventListener("resize", () => {
+        window.addEventListener("resize", debounce(() => {
           if (resized()) {
             setup(false);
             draw(10);
           }
-        });
+        }, 150));
         return;
       }
 
@@ -213,12 +225,12 @@
       canvas.addEventListener("pointerup", (e) => {
         if (e.pointerType !== "mouse") onLeave();
       });
-      window.addEventListener("resize", () => {
+      window.addEventListener("resize", debounce(() => {
         if (resized()) {
           setup(false);
           wake();
         }
-      });
+      }, 150));
     }
 
     img = new Image();

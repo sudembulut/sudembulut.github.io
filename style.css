@@ -191,7 +191,7 @@ img { display: block; max-width: 100%; height: auto; }
   padding: 28px; border-radius: 20px; transition: transform .4s var(--ease);
 }
 .tile:has(.tile-link):hover { transform: translateY(-6px); }
-.tile:has(.tile-link:focus-visible) { outline: 3px solid var(--kor); outline-offset: 3px; }
+.tile:has(.tile-link:focus-visible) { outline: 3px solid var(--gece); outline-offset: 3px; }
 .tile .meta { color: inherit; opacity: .75; }
 .tile .k { font-weight: 900; font-size: clamp(56px, 6.5vw, 112px); letter-spacing: -.06em; line-height: .85; }
 .tile h3 { font-weight: 800; font-size: 22px; letter-spacing: -.02em; margin-top: 10px; }
@@ -254,6 +254,10 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ---------- small screens ---------- */
 
+@media (max-height: 700px) {
+  .xp { position: static; min-height: 0; }
+}
+
 @media (max-width: 800px) {
   :root { --nav-h: 124px; }
   .site-nav { flex-wrap: wrap; padding-block: 12px; row-gap: 10px; background: var(--kemik); }
@@ -265,7 +269,10 @@ img { display: block; max-width: 100%; height: auto; }
   .hero-intro { grid-template-columns: 1fr; gap: 20px; }
 
   .sec { padding-top: 96px; }
-  .sec-head { gap: 14px; }
+  .sec-head { gap: 14px; flex-wrap: wrap; }
+  .sec-head .n { font-size: clamp(64px, 20vw, 120px); }
+  .sec-head > span:last-child { font-size: clamp(34px, 10vw, 56px); overflow-wrap: anywhere; }
+  .t-crowd .k { font-size: clamp(56px, 17vw, 120px); }
 
   .xp { position: static; grid-template-columns: 1fr; gap: 24px; padding: 28px; min-height: 0; }
 
@@ -283,10 +290,15 @@ img { display: block; max-width: 100%; height: auto; }
   .site-footer { margin-top: 96px; padding-top: 64px; }
 }
 
+@media (max-width: 380px) {
+  .pill a, .lang-toggle button { padding: 8px 6px; font-size: 12px; }
+}
+
 /* ---------- accessibility floor ---------- */
 
 :focus-visible { outline: 3px solid var(--alarm); outline-offset: 3px; }
 .on-dark :focus-visible { outline-color: var(--kor); }
+.xp-zaaf :focus-visible, .t-akbank :focus-visible, .xp-amazon :focus-visible, .t-crowd :focus-visible { outline-color: var(--kemik); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
