@@ -140,6 +140,7 @@ img { display: block; max-width: 100%; height: auto; }
 .cap-k::first-letter { color: var(--alarm); }
 .cap-v { flex: 1; font-size: 20px; letter-spacing: -.01em; }
 .cap-v b { font-weight: 900; }
+.cap-logo { display: inline-block; height: 1.15em; width: auto; vertical-align: -0.22em; margin-left: .15em; }
 .cap a { font: 13px var(--mono); color: var(--murekkep); transition: color .2s; }
 .cap a:hover { color: var(--alarm); }
 
@@ -160,6 +161,7 @@ img { display: block; max-width: 100%; height: auto; }
   box-shadow: 0 -10px 40px rgba(23, 15, 16, .08);
 }
 .xp .co { font-weight: 900; font-size: clamp(64px, 9vw, 150px); letter-spacing: -.06em; line-height: .85; }
+.xp .co-logo img { height: clamp(52px, 7.2vw, 118px); width: auto; }
 .xp .role { margin-top: 18px; font-weight: 800; font-size: 20px; }
 .xp .meta { margin-top: 8px; }
 .xp .sum { font-size: clamp(20px, 1.8vw, 28px); line-height: 1.3; letter-spacing: -.01em; }

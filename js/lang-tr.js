@@ -15,7 +15,7 @@ window.LANG_TR = {
   "link.email": "E-posta",
   "portrait.label": "Sudem Bulut'un ASCII portresi",
   "cap.now": "şimdi",
-  "cap.role": "Kurucu ortak, <b>zaaf.</b>",
+  "cap.role": "Kurucu ortak,",
 
   // experience
   "exp.head": "Dene<i>yim</i>",
