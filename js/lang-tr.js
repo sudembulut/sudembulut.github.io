@@ -11,7 +11,7 @@ window.LANG_TR = {
   "lang.label": "Dil",
 
   // hero
-  "hero.lead": "<b>Uygulamalı matematikçi</b>, zaaf'ı kuruyorum. Öncesinde Amazon'daydım; veri, mühendislik ve yapay zekânın kesiştiği yerde çalışıyorum.",
+  "hero.lead": "Uygulamalı matematikçi, <b class=\"x\">zaaf</b>'ı kuruyorum. Öncesinde Amazon'daydım; veri, mühendislik ve yapay zekânın kesiştiği yerde çalışıyorum.",
   "link.email": "E-posta",
   "portrait.label": "Sudem Bulut'un ASCII portresi",
   "cap.now": "şimdi",
