@@ -36,7 +36,7 @@ window.LANG_TR = {
   "exp.getir.list": "<li>Dağınık bir veri ortamında KPI panoları.</li><li>Ürün ve Operasyon ekipleriyle çok kanallı geri bildirim analizi.</li>",
   "exp.startgate.role": "İş Geliştirme Stajyeri",
   "exp.startgate.when": "Eyl 2023 — Şub 2024",
-  "exp.startgate.sum": "AB ve MENAT bölgesinde hizmet veren bir dijital oyun hızlandırıcısı için iş modelleri ve pazara giriş stratejisi geliştirdim.",
+  "exp.startgate.list": "<li>AB ve MENAT bölgesinde hizmet veren bir dijital oyun hızlandırıcısı için iş modelleri ve pazara giriş stratejisi geliştirdim.</li>",
 
   // projects
   "proj.head": "Araştırma <i>&amp;</i><br>projeler",
