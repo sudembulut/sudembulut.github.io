@@ -7,7 +7,6 @@ window.LANG_TR = {
   "nav.experience": "Deneyim",
   "nav.projects": "Projeler",
   "nav.community": "Topluluk",
-  "nav.certs": "Sertifikalar",
   "nav.cta": "Tanışalım →",
   "lang.label": "Dil",
 
